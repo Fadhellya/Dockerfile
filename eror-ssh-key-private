@@ -1,0 +1,7 @@
+#windows
+icacls "<ssh-keys-path>" /inheritance:r
+icacls "ssh-keys-path" /remove "NT AUTHORITY\Authenticated Users"
+icacls "ssh-keys-path" /remove "BUILTIN\Users"
+icacls "ssh-keys-path" /remove "BUILTIN\Administrators"
+icacls "ssh-keys-path" /remove "NT AUTHORITY\SYSTEM"
+icacls "ssh-keys-path" /grant:r "$($env:UserName):(R)"
