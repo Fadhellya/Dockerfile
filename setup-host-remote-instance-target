@@ -1,0 +1,4 @@
+#rhel
+sudo yum install openssh-server && sudo systemctl start sshd.service && sudo systemctl enable sshd.service
+#ubuntu
+sudo apt-get install openssh-server
